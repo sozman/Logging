@@ -1,5 +1,7 @@
 #if canImport(UIKit)
 
+import UIKit
+
 public func exampleLog() {
     print("OK")
 }

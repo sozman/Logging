@@ -8,6 +8,8 @@
 import Foundation
 #if canImport(UIKit)
 
+import UIKit
+
 /// Info Type
 enum InfoType: String {
     case willOpen

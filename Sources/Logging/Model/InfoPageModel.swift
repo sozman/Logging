@@ -7,6 +7,8 @@
 
 #if canImport(UIKit)
 
+import UIKit
+
 /// Info Page Model
 class InfoPageModel: Codable {
     /// View Controller
