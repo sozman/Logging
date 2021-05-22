@@ -12,9 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Logging",
-            targets: ["Logging"]),
-        .library(
-            name: "LogListener", targets: ["Logging"])
+            targets: ["Logging"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -26,10 +24,6 @@ let package = Package(
         .target(
             name: "Logging",
             dependencies: []),
-        .target(
-            name: "LogListener",
-            dependencies: [],
-            path: "Sources/LogListener"),
         .testTarget(
             name: "LoggingTests",
             dependencies: ["Logging"]),
