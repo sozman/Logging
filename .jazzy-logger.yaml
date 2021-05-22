@@ -1,0 +1,15 @@
+
+# Ordered by output of `jazzy --help config`
+
+output: Documentation
+clean: true
+documentation: guides/*.md
+sdk: iphone
+author: Sinan Ozman
+module: Logging
+module_version: 1.0
+copyright: Copyright © 2021 Sinan Ozman. All rights reserved.
+min_acl: private
+# Options : [apple | fullwidth | jony | DIRPATH]
+# Which theme to use. Specify either 'apple' (default), one of the other built-in theme names, or the path to your mustache templates and other assets for a custom theme.Default: apple
+theme: apple
