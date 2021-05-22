@@ -28,7 +28,8 @@ let package = Package(
             dependencies: []),
         .target(
             name: "LogListener",
-            dependencies: []),
+            dependencies: [],
+            path: "Sources/LogListener"),
         .testTarget(
             name: "LoggingTests",
             dependencies: ["Logging"]),
