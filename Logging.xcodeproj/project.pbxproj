@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -22,6 +22,10 @@
 
 /* Begin PBXBuildFile section */
 		6C813B2D26596B7700A8C312 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C813B2C26596B7700A8C312 /* main.swift */; };
+		6C813B4326596D6700A8C312 /* Fluent in Frameworks */ = {isa = PBXBuildFile; productRef = 6C813B4226596D6700A8C312 /* Fluent */; };
+		6C813B4B265971BA00A8C312 /* routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C813B4A265971BA00A8C312 /* routes.swift */; };
+		6C813B52265971CF00A8C312 /* configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C813B51265971CF00A8C312 /* configure.swift */; };
+		6C813B5A265971EA00A8C312 /* LogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C813B59265971EA00A8C312 /* LogController.swift */; };
 		OBJ_34 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Config.swift */; };
 		OBJ_35 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Logging.swift */; };
 		OBJ_36 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ErrorModel.swift */; };
@@ -67,6 +71,9 @@
 /* Begin PBXFileReference section */
 		6C813B2A26596B7700A8C312 /* LogListener */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LogListener; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C813B2C26596B7700A8C312 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6C813B4A265971BA00A8C312 /* routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = routes.swift; sourceTree = "<group>"; };
+		6C813B51265971CF00A8C312 /* configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configure.swift; sourceTree = "<group>"; };
+		6C813B59265971EA00A8C312 /* LogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogController.swift; sourceTree = "<group>"; };
 		"Logging::Logging::Product" /* Logging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Logging::LoggingTests::Product" /* LoggingTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = LoggingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
@@ -89,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C813B4326596D6700A8C312 /* Fluent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,9 +121,28 @@
 		6C813B2B26596B7700A8C312 /* LogListener */ = {
 			isa = PBXGroup;
 			children = (
+				6C813B58265971DF00A8C312 /* Controller */,
+				6C813B49265971AA00A8C312 /* Config */,
 				6C813B2C26596B7700A8C312 /* main.swift */,
 			);
 			path = LogListener;
+			sourceTree = "<group>";
+		};
+		6C813B49265971AA00A8C312 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				6C813B4A265971BA00A8C312 /* routes.swift */,
+				6C813B51265971CF00A8C312 /* configure.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		6C813B58265971DF00A8C312 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6C813B59265971EA00A8C312 /* LogController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		OBJ_11 /* Model */ = {
@@ -224,6 +251,9 @@
 			dependencies = (
 			);
 			name = LogListener;
+			packageProductDependencies = (
+				6C813B4226596D6700A8C312 /* Fluent */,
+			);
 			productName = LogListener;
 			productReference = 6C813B2A26596B7700A8C312 /* LogListener */;
 			productType = "com.apple.product-type.tool";
@@ -287,7 +317,6 @@
 				TargetAttributes = {
 					6C813B2926596B7700A8C312 = {
 						CreatedOnToolsVersion = 12.4;
-						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -299,6 +328,9 @@
 				en,
 			);
 			mainGroup = OBJ_5 /*  */;
+			packageReferences = (
+				6C813B4126596D6700A8C312 /* XCRemoteSwiftPackageReference "fluent" */,
+			);
 			productRefGroup = OBJ_23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -317,7 +349,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C813B5A265971EA00A8C312 /* LogController.swift in Sources */,
 				6C813B2D26596B7700A8C312 /* main.swift in Sources */,
+				6C813B4B265971BA00A8C312 /* routes.swift in Sources */,
+				6C813B52265971CF00A8C312 /* configure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +550,10 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Logging.xcodeproj/Logging_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -543,7 +581,10 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Logging.xcodeproj/Logging_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -579,7 +620,8 @@
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
@@ -626,7 +668,11 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Logging.xcodeproj/LoggingTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -651,7 +697,11 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Logging.xcodeproj/LoggingTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -722,6 +772,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6C813B4126596D6700A8C312 /* XCRemoteSwiftPackageReference "fluent" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vapor/fluent.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6C813B4226596D6700A8C312 /* Fluent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C813B4126596D6700A8C312 /* XCRemoteSwiftPackageReference "fluent" */;
+			productName = Fluent;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = OBJ_1 /* Project object */;
 }
